@@ -46,18 +46,17 @@ namespace LoopbackCapture
                     break;
             }
 
-            //set wave format
-            WaveFormat wave_format = new WaveFormat(44100, 32, 2, AudioEncoding.Pcm);
-            int latency = 100;
-
-            using (WasapiCapture capture = new WasapiLoopbackCapture(latency, wave_format))
+            using (WasapiCapture capture = new WasapiLoopbackCapture())
             {
 
                 //initialize the selected device for recording
                 capture.Initialize();
 
+                //set WaveFormatTag to Pcm
+                WaveFormat wave_format = new WaveFormat(capture.WaveFormat.SampleRate, capture.WaveFormat.BitsPerSample, capture.WaveFormat.Channels, AudioEncoding.Pcm);
+
                 //create a wavewriter to write the data to
-                using (WaveWriter w = new WaveWriter(output_file, capture.WaveFormat))
+                using (WaveWriter w = new WaveWriter(output_file, wave_format))
                 {
                     //setup an eventhandler to receive the recorded data
                     capture.DataAvailable += (s, e) =>
