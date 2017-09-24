@@ -25,6 +25,20 @@ You can get compiled Soundflower kernel extension in here: https://github.com/ma
 
 About how to setup device, there is an example in Release Note please take a look.
 
+## Install Avconv Tool (Linux)
+
+avconv is a part from "libav-tools" package which is support to record audio use command line with specific format specific duration and from specific device.
+
+```
+sudo apt-get install libav-tools
+```
+
+BTW, the pulsectl is required for `linux\LoopbackCapture.py`, use following command to install it:
+
+```
+pip install pulsectl
+```
+
 ## Usage
 
 ```
@@ -49,5 +63,9 @@ About how to setup device, there is an example in Release Note please take a loo
 > from mac.LoopbackCapture import record_sounds
 > exit_code = record_sounds(audio_file, milliseconds)
 
+# Python (Linux)
+
+> from linux.LoopbackCapture import record_sounds
+> exit_code = record_sounds(audio_file, milliseconds)
 ```
 
