@@ -1,0 +1,28 @@
+# Visual Studio Code Configuration Files
+.vscode/
+
+# Visual Studio Configuration Files
+.vs/
+*.dll.config
+*.exe.config
+*.vcxproj.user
+
+# Python
+*.pyc
+
+# LoopbackCapture Build Output Folder
+/win32/csharp/LoopbackCapture/LoopbackCapture/bin
+/win32/csharp/LoopbackCapture/LoopbackCapture/obj
+/win32/dll/LoopbackCapture/LoopbackCapture/bin
+/win32/dll/LoopbackCapture/LoopbackCapture/obj
+/win32/cpp/LoopbackCapture/LoopbackCapture/Debug
+/win32/cpp/LoopbackCapture/LoopbackCapture/Release
+/win32/cpp/LoopbackCapture/Debug
+/win32/cpp/LoopbackCapture/Release
+/win32/cpp/LoopbackCapture/LoopbackCapture.VC.db
+
+# Binaries
+*.dll
+*.lib
+*.pdb
+*.exe
