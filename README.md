@@ -58,6 +58,20 @@ pip install pulsectl
     --time capture specific milliseconds
     --int-16 attempts to coerce data to 16-bit integer format
 
+# Python (DLL)
+
+> import os, sys, platform, clr
+> if platform.architecture()[0] == "32bit":
+>     DLL_PATH = r"win32\dll\LoopbackCapture\LoopbackCapture\bin\x86\Release"
+> elif platform.architecture()[0] == "64bit":
+>     DLL_PATH = r"win32\dll\LoopbackCapture\LoopbackCapture\bin\x64\Release"
+> DLL_PATH = os.path.join(os.path.dirname(os.path.realpath(__file__)), DLL_PATH)
+> sys.path.append(DLL_PATH)
+> clr.AddReference("LoopbackCapture")
+> from LoopbackCapture import LoopbackCapture
+> lc = LoopbackCapture()
+> lc.Capture("record.wav", 15000)
+
 # Python (macOS)
 
 > from mac.LoopbackCapture import record_sounds
