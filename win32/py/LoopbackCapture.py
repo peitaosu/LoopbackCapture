@@ -12,7 +12,6 @@ output_file = "out.wav"
 time = 5000
 
 sampleRate = 48000
-bitsPerSample = 24
 
 soundIn = WasapiLoopbackCapture()
 soundIn.Initialize()
@@ -21,7 +20,6 @@ soundInSource.FillWithZeros = False
 convertedSource = soundInSource
 convertedSource = FluentExtensions.ChangeSampleRate(convertedSource, sampleRate)
 waveWriter = WaveWriter(output_file, convertedSource.WaveFormat)
-#waveWriter = WaveWriter(output_file, soundInSource.WaveFormat)
 
 def capture(sender, event_args):
     buffer = Array.CreateInstance(Byte, convertedSource.WaveFormat.BytesPerSecond / 2)
