@@ -76,12 +76,12 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CSCore, Version=1.2.1.1, Culture=neutral, PublicKeyToken=5a08f2b6f4415dea, processorArchitecture=MSIL">
-      <HintPath>..\packages\CSCore.1.2.1.1\lib\net35-client\CSCore.dll</HintPath>
+    <Reference Include="CSCore">
+      <HintPath>..\..\..\..\3rdparty\CSCore.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="RGiesecke.DllExport.Metadata, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8f52d83c1a22df51, processorArchitecture=MSIL">
-      <HintPath>..\packages\UnmanagedExports.1.2.7\lib\net\RGiesecke.DllExport.Metadata.dll</HintPath>
+    <Reference Include="RGiesecke.DllExport.Metadata">
+      <HintPath>..\..\..\..\3rdparty\RGiesecke.DllExport.Metadata.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />

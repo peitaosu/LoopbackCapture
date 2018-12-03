@@ -22,7 +22,6 @@
 /win32/cpp/LoopbackCapture/LoopbackCapture.VC.db
 
 # Binaries
-*.dll
 *.lib
 *.pdb
 *.exe
