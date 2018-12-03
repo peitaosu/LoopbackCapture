@@ -1,12 +1,34 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <PropertyGroup>
+    <ItemGroup Label="ProjectConfigurations">
+        <ProjectConfiguration Include="Debug|Win32">
+        <Configuration>Debug</Configuration>
+        <Platform>Win32</Platform>
+        </ProjectConfiguration>
+        <ProjectConfiguration Include="Release|Win32">
+        <Configuration>Release</Configuration>
+        <Platform>Win32</Platform>
+        </ProjectConfiguration>
+    </ItemGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+    <PropertyGroup Label="Globals">
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">Win32</Platform>
         <ConfigurationType>Application</ConfigurationType>
         <PlatformToolset>v140</PlatformToolset>
         <CharacterSet>MultiByte</CharacterSet>
     </PropertyGroup>
-    <PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+        <UseDebugLibraries>true</UseDebugLibraries>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+        <UseDebugLibraries>false</UseDebugLibraries>
+        <WholeProgramOptimization>true</WholeProgramOptimization>
+    </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <ImportGroup Label="PropertySheets">
+        <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    </ImportGroup>
+    <ItemDefinitionGroup>
         <ClCompile>
             <WarningLevel>Level4</WarningLevel>
             <SDLCheck>true</SDLCheck>
@@ -18,16 +40,13 @@
             <AdditionalDependencies>avrt.lib;ole32.lib;winmm.lib</AdditionalDependencies>
             <GenerateDebugInformation>true</GenerateDebugInformation>
         </Link>
-    </PropertyGroup>
-    <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-        <UseDebugLibraries>true</UseDebugLibraries>
+    </ItemDefinitionGroup>
+    <ItemDefinitionGroup Condition="'$(Configuration)' == 'Debug'">
         <ClCompile>
               <Optimization>Disabled</Optimization>
         </ClCompile>
-    </PropertyGroup>
-    <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-        <UseDebugLibraries>false</UseDebugLibraries>
-        <WholeProgramOptimization>true</WholeProgramOptimization>
+    </ItemDefinitionGroup>
+    <ItemDefinitionGroup Condition="'$(Configuration)' == 'Release'"> 
         <ClCompile>
                 <Optimization>MaxSpeed</Optimization>
                 <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -37,5 +56,5 @@
             <EnableCOMDATFolding>true</EnableCOMDATFolding>
             <OptimizeReferences>true</OptimizeReferences>
         </Link>
-    </PropertyGroup>
+    </ItemDefinitionGroup>
 </Project>
