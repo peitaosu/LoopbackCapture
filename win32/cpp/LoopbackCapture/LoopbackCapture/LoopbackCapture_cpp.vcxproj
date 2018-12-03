@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  <Import Project="..\..\..\..\build\LoopbackCapture.Cpp.targets" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D5E40402-40F8-4CA2-AAA0-9A145F804F63}</ProjectGuid>
+    <RootNamespace>loopbackcapture</RootNamespace>
+    <ProjectName>LoopbackCapture</ProjectName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="guid.cpp" />
+    <ClCompile Include="LoopbackCapture.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="prefs.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cleanup.h" />
+    <ClInclude Include="common.h" />
+    <ClInclude Include="log.h" />
+    <ClInclude Include="LoopbackCapture.h" />
+    <ClInclude Include="prefs.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

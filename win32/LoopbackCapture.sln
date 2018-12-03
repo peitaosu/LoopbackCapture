@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LoopbackCapture_cpp", "cpp\LoopbackCapture\LoopbackCapture\LoopbackCapture_cpp.vcxproj", "{D5E40402-40F8-4CA2-AAA0-9A145F804F63}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LoopbackCapture_csharp", "csharp\LoopbackCapture\LoopbackCapture\LoopbackCapture_csharp.csproj", "{36591122-E580-4FEC-86CE-FAE0CE926C0C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LoopbackCapture_dll", "dll\LoopbackCapture\LoopbackCapture\LoopbackCapture_dll.csproj", "{36591122-E580-4FEC-86CE-FAE0CE926C0D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5E40402-40F8-4CA2-AAA0-9A145F804F63}.Debug|x86.ActiveCfg = Debug|x86
+		{D5E40402-40F8-4CA2-AAA0-9A145F804F63}.Debug|x86.Build.0 = Debug|x86
+		{D5E40402-40F8-4CA2-AAA0-9A145F804F63}.Release|x86.ActiveCfg = Release|x86
+		{D5E40402-40F8-4CA2-AAA0-9A145F804F63}.Release|x86.Build.0 = Release|x86
+		{36591122-E580-4FEC-86CE-FAE0CE926C0C}.Debug|x64.ActiveCfg = Debug|x64
+		{36591122-E580-4FEC-86CE-FAE0CE926C0C}.Debug|x64.Build.0 = Debug|x64
+		{36591122-E580-4FEC-86CE-FAE0CE926C0C}.Debug|x86.ActiveCfg = Debug|x86
+		{36591122-E580-4FEC-86CE-FAE0CE926C0C}.Debug|x86.Build.0 = Debug|x86
+		{36591122-E580-4FEC-86CE-FAE0CE926C0C}.Release|x64.ActiveCfg = Release|x64
+		{36591122-E580-4FEC-86CE-FAE0CE926C0C}.Release|x64.Build.0 = Release|x64
+		{36591122-E580-4FEC-86CE-FAE0CE926C0C}.Release|x86.ActiveCfg = Release|x86
+		{36591122-E580-4FEC-86CE-FAE0CE926C0C}.Release|x86.Build.0 = Release|x86
+		{36591122-E580-4FEC-86CE-FAE0CE926C0D}.Debug|x64.ActiveCfg = Debug|x64
+		{36591122-E580-4FEC-86CE-FAE0CE926C0D}.Debug|x64.Build.0 = Debug|x64
+		{36591122-E580-4FEC-86CE-FAE0CE926C0D}.Debug|x86.ActiveCfg = Debug|x86
+		{36591122-E580-4FEC-86CE-FAE0CE926C0D}.Debug|x86.Build.0 = Debug|x86
+		{36591122-E580-4FEC-86CE-FAE0CE926C0D}.Release|x64.ActiveCfg = Release|x64
+		{36591122-E580-4FEC-86CE-FAE0CE926C0D}.Release|x64.Build.0 = Release|x64
+		{36591122-E580-4FEC-86CE-FAE0CE926C0D}.Release|x86.ActiveCfg = Release|x86
+		{36591122-E580-4FEC-86CE-FAE0CE926C0D}.Release|x86.Build.0 = Release|x86
+
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

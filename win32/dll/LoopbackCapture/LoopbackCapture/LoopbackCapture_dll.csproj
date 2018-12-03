@@ -3,7 +3,7 @@
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <Import Project="..\..\..\..\build\LoopbackCapture.CSharp.targets" />
   <PropertyGroup>
-    <ProjectGuid>{36591122-E580-4FEC-86CE-FAE0CE926C0C}</ProjectGuid>
+    <ProjectGuid>{36591122-E580-4FEC-86CE-FAE0CE926C0D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>LoopbackCapture</RootNamespace>
     <AssemblyName>LoopbackCapture</AssemblyName>
