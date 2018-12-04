@@ -19,5 +19,4 @@
     <ClInclude Include="LoopbackCapture.h" />
     <ClInclude Include="prefs.h" />
   </ItemGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
 </Project>

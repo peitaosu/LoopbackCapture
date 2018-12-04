@@ -1,21 +1,38 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <ItemGroup Label="ProjectConfigurations">
         <ProjectConfiguration Include="Debug|Win32">
-        <Configuration>Debug</Configuration>
-        <Platform>Win32</Platform>
+            <Configuration>Debug</Configuration>
+            <Platform>Win32</Platform>
         </ProjectConfiguration>
         <ProjectConfiguration Include="Release|Win32">
-        <Configuration>Release</Configuration>
-        <Platform>Win32</Platform>
+            <Configuration>Release</Configuration>
+            <Platform>Win32</Platform>
+        </ProjectConfiguration>
+        <ProjectConfiguration Include="Debug|x64">
+            <Configuration>Debug</Configuration>
+            <Platform>x64</Platform>
+        </ProjectConfiguration>
+        <ProjectConfiguration Include="Release|x64">
+            <Configuration>Release</Configuration>
+            <Platform>x64</Platform>
         </ProjectConfiguration>
     </ItemGroup>
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
     <PropertyGroup Label="Globals">
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">Win32</Platform>
+        <Platform Condition=" '$(Platform)' == 'x86' ">Win32</Platform>
         <ConfigurationType>Application</ConfigurationType>
         <PlatformToolset>v140</PlatformToolset>
         <CharacterSet>MultiByte</CharacterSet>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Platform)' == 'Win32' ">
+        <OutDir>..\..\..\..\bin\x86\$(Configuration)\</OutDir>
+        <IntDir>..\..\..\..\obj\x86\$(Configuration)\</IntDir>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Platform)' == 'x64' ">
+        <OutDir>..\..\..\..\bin\x64\$(Configuration)\</OutDir>
+        <IntDir>..\..\..\..\obj\x64\$(Configuration)\</IntDir>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
         <UseDebugLibraries>true</UseDebugLibraries>
@@ -57,4 +74,5 @@
             <OptimizeReferences>true</OptimizeReferences>
         </Link>
     </ItemDefinitionGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
 </Project>
