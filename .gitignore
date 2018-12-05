@@ -6,6 +6,7 @@
 *.dll.config
 *.exe.config
 *.vcxproj.user
+*.tlog
 
 # Python
 *.pyc
