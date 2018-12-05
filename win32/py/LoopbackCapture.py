@@ -1,6 +1,6 @@
 import os, sys, clr
 
-sys.path.append(os.path.dirname(os.path.realpath(__file__)))
+sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)), "..\\..\\3rdparty"))
 clr.AddReference("CSCore")
 from System import EventHandler, EventArgs, Array, Byte, Threading
 from CSCore import *
