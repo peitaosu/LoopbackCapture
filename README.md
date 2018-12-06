@@ -8,7 +8,7 @@ Loopback Capture is a tool which can be used to capture the loopback from audio 
 
 ## Build (Windows)
 
-The `win32\csharp` and `win32\dll` version require some packages, before you build it, you need to install these packages:
+The `win32\csharp` and `win32\dll` version require some packages, before you build it, you need to install these packages and put dll files to `3rdparty` folder:
 
 * CSCore - An advanced audio library, written in C#.
 * Unmanaged Exports - DllExport for .Net.
@@ -16,7 +16,7 @@ The `win32\csharp` and `win32\dll` version require some packages, before you bui
 Suggest to use NuGet to install them:
 
 ```
-nuget restore LoopbackCapture.sln
+nuget install .\build\packages.config
 ```
 
 ## Install Soundflower (macOS)
