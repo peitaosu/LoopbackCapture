@@ -19,6 +19,17 @@ Suggest to use NuGet to install them:
 nuget install .\build\packages.config
 ```
 
+Then in MSBuild Command Prompt:
+```
+> build.all.bat
+or
+> build.cpp.bat
+or
+> build.csharp.bat
+or
+> build.dll.bat
+```
+
 ## Install Soundflower (macOS)
 
 macOS not support to capture Loopback from device directly. The workaround is to route what is playing on the computer digitally back to the input without using a cable.
@@ -66,9 +77,9 @@ pip install pulsectl
 
 > import os, sys, platform, clr
 > if platform.architecture()[0] == "32bit":
->     DLL_PATH = r"win32\dll\LoopbackCapture\LoopbackCapture\bin\x86\Release"
+>     DLL_PATH = r"bin\x86\Release"
 > elif platform.architecture()[0] == "64bit":
->     DLL_PATH = r"win32\dll\LoopbackCapture\LoopbackCapture\bin\x64\Release"
+>     DLL_PATH = r"bin\x64\Release"
 > DLL_PATH = os.path.join(os.path.dirname(os.path.realpath(__file__)), DLL_PATH)
 > sys.path.append(DLL_PATH)
 > clr.AddReference("LoopbackCapture")
