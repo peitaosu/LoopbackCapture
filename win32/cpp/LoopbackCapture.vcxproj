@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\..\..\..\build\LoopbackCapture.Cpp.targets" />
+  <Import Project="..\..\build\LoopbackCapture.Cpp.targets" />
   <PropertyGroup Label="Globals">
     <ProjectGuid>{D5E40402-40F8-4CA2-AAA0-9A145F804F63}</ProjectGuid>
     <RootNamespace>loopbackcapture</RootNamespace>

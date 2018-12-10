@@ -27,12 +27,12 @@
         <CharacterSet>MultiByte</CharacterSet>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Platform)' == 'Win32' ">
-        <OutDir>..\..\..\..\bin\x86\$(Configuration)\</OutDir>
-        <IntDir>..\..\..\..\obj\x86\$(Configuration)\</IntDir>
+        <OutDir>..\..\bin\x86\$(Configuration)\</OutDir>
+        <IntDir>..\..\obj\x86\$(Configuration)\</IntDir>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Platform)' == 'x64' ">
-        <OutDir>..\..\..\..\bin\x64\$(Configuration)\</OutDir>
-        <IntDir>..\..\..\..\obj\x64\$(Configuration)\</IntDir>
+        <OutDir>..\..\bin\x64\$(Configuration)\</OutDir>
+        <IntDir>..\..\obj\x64\$(Configuration)\</IntDir>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
         <UseDebugLibraries>true</UseDebugLibraries>

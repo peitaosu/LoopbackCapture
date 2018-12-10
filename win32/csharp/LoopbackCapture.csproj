@@ -1,20 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <Import Project="..\..\..\..\build\LoopbackCapture.CSharp.targets" />
+  <Import Project="..\..\build\LoopbackCapture.CSharp.targets" />
   <PropertyGroup>
-    <ProjectGuid>{36591122-E580-4FEC-86CE-FAE0CE926C0D}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{36591122-E580-4FEC-86CE-FAE0CE926C0C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <RootNamespace>LoopbackCapture</RootNamespace>
     <AssemblyName>LoopbackCapture</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CSCore">
-      <HintPath>..\..\..\..\3rdparty\CSCore.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="RGiesecke.DllExport.Metadata">
-      <HintPath>..\..\..\..\3rdparty\RGiesecke.DllExport.Metadata.dll</HintPath>
+      <HintPath>..\..\3rdparty\CSCore.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />

@@ -8,8 +8,8 @@
     </PropertyGroup>
     <PropertyGroup>
         <PlatformTarget>$(Platform)</PlatformTarget>
-        <OutputPath>..\..\..\..\bin\$(Platform)\$(Configuration)\</OutputPath>
-        <BaseIntermediateOutputPath>..\..\..\..\obj</BaseIntermediateOutputPath>
+        <OutputPath>..\..\bin\$(Platform)\$(Configuration)\</OutputPath>
+        <BaseIntermediateOutputPath>..\..\obj</BaseIntermediateOutputPath>
         <IntermediateOutputPath>$(BaseIntermediateOutputPath)\$(Platform)\$(Configuration)\</IntermediateOutputPath>
         <DefineConstants>TRACE</DefineConstants>
         <ErrorReport>prompt</ErrorReport>
@@ -25,6 +25,6 @@
         <Optimize>true</Optimize>
     </PropertyGroup>
     <ItemGroup>
-        <Compile Include="..\..\..\..\build\VersionAssembly.cs" />
+        <Compile Include="..\..\build\VersionAssembly.cs" />
     </ItemGroup>
 </Project>
