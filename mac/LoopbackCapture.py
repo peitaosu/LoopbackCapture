@@ -18,7 +18,7 @@ def record_sounds(output_file="record.wav", time=0):
             frames.append(data)
     else:
         try:
-            print "Press Ctrl+C to exit..."
+            print("Press Ctrl+C to exit...")
             while True:
                 data = stream.read(CHUNK, False)
                 frames.append(data)
