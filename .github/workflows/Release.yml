@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-2019
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Windows 8.1 SDK
+        shell: powershell
+        run: |
+          Invoke-WebRequest -Method Get -Uri https://go.microsoft.com/fwlink/p/?LinkId=323507 -OutFile sdksetup.exe -UseBasicParsing
+          Start-Process -Wait sdksetup.exe -ArgumentList "/q", "/norestart", "/features", "OptionId.WindowsDesktopSoftwareDevelopmentKit", "OptionId.NetFxSoftwareDevelopmentKit"
+
+      - name: Add msbuild to PATH
+        uses: microsoft/setup-msbuild@v1.1
+        with:
+          vs-version: '14.0'
+
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v1.0.6 
+
+      - name: Restore nuget
+        run: nuget restore win32\cpp\LoopbackCapture.vcxproj
+
+      - name: Build Win32
+        run: msbuild win32\cpp\LoopbackCapture.vcxproj /p:Configuration=Release /p:Platform=x86 /t:Clean,Build
+
+      - name: Upload Win32
+        uses: actions/upload-artifact@v2
+        with:
+          name: LoopbackCapture-Win32
+          path: "${{github.workspace}}/bin/x86/Release/LoopbackCapture.exe"
+
+      - name: GitHub release
+        uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{secrets.GITHUB_TOKEN}}"
+          automatic_release_tag: "latest"
+          prerelease: false
+          title: "LoopbackCapture"
+          files: "D:/a/LoopbackCapture/LoopbackCapture/bin/x86/Release/LoopbackCapture.exe"
