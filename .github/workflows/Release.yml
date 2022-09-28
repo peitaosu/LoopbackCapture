@@ -27,7 +27,7 @@ jobs:
         uses: NuGet/setup-nuget@v1.0.6 
 
       - name: Restore nuget
-        run: nuget restore win32\cpp\LoopbackCapture.vcxproj
+        run: nuget install build\packages.config
 
       - name: Build Win32
         run: msbuild win32\cpp\LoopbackCapture.vcxproj /p:Configuration=Release /p:Platform=x86 /t:Clean,Build
