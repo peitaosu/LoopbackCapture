@@ -26,19 +26,19 @@ jobs:
       - name: Setup NuGet
         uses: NuGet/setup-nuget@v1.0.6 
 
-      - name: Restore nuget
+      - name: Install NuGet packages
         run: nuget install build\packages.config
 
       - name: Build Win32
         run: msbuild win32\cpp\LoopbackCapture.vcxproj /p:Configuration=Release /p:Platform=x86 /t:Clean,Build
 
-      - name: Upload Win32
+      - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
           name: LoopbackCapture-Win32
           path: "${{github.workspace}}/bin/x86/Release/LoopbackCapture.exe"
 
-      - name: GitHub release
+      - name: GitHub release with artifact
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{secrets.GITHUB_TOKEN}}"
